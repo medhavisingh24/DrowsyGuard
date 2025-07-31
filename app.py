@@ -24,7 +24,7 @@ if uploaded_file is not None:
 
         # Resize for Streamlit
         frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-        stframe.image(frame, channels="RGB", use_column_width=True)
+        stframe.image(frame, channels="RGB", use_container_width=True)  # ✅ Fixed here
 
     cap.release()
     st.success("✅ Video playback complete!")
